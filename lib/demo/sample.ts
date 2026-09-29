@@ -1,0 +1,23 @@
+/** FICTIONAL sample candidate used for template previews. */
+export const SAMPLE_CANDIDATE: Record<string, string> = {
+  candidate_name: "Ananya Iyer",
+  father_name: "Suresh Iyer",
+  roll_number: "SAT260001",
+  application_number: "APP-2026-10007",
+  registration_number: "REG-2026-4471",
+  date_of_birth: "2011-08-14",
+  gender: "Female",
+  category: "General",
+  photo: "demo:avatar-4",
+  exam_name: "SATHII Scholarship Examination 2026",
+  exam_date: "2026-11-15",
+  exam_time: "10:00 AM – 12:00 PM",
+  reporting_time: "09:15 AM",
+  gate_closing_time: "09:45 AM",
+  exam_duration: "2 hours",
+  shift: "Morning",
+  exam_center: "S-CUBUS CAREER PVT. LTD. SECTOR- 12, DWARKA, DELHI",
+  center_address: "3rd Floor, Plot No. 46, Block No. B, Sector 12, Dwarka, Delhi 110078",
+  class: "10th (JEE)",
+  sathii_key: "SAT26-10J-1001",
+};
