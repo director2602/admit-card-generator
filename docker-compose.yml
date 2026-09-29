@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: admitcard
+      POSTGRES_PASSWORD: admitcard
+      POSTGRES_DB: admitcard
+    volumes: [pgdata:/var/lib/postgresql/data]
+    ports: ["5432:5432"]
+  app:
+    build: .
+    depends_on: [db]
+    ports: ["3000:3000"]
+    environment:
+      DATABASE_URL: postgresql://admitcard:admitcard@db:5432/admitcard
+      AUTH_SECRET: ${AUTH_SECRET:?set AUTH_SECRET (32+ random chars)}
+      INSECURE_COOKIES: "true" # remove when served over HTTPS
+    volumes: [storage:/app/storage]
+volumes:
+  pgdata:
+  storage:
