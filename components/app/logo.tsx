@@ -1,16 +1,19 @@
+/* eslint-disable @next/next/no-img-element -- static brand images from /public */
 export function AppLogo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      <svg viewBox="0 0 32 32" className="size-8" aria-hidden="true">
-        <rect width="32" height="32" rx="8" fill="#1f2a5c" />
-        <rect x="7" y="8" width="18" height="16" rx="2.5" fill="none" stroke="#fff" strokeWidth="2" />
-        <rect x="10" y="12" width="5" height="6" rx="1" fill="#c08a2e" />
-        <path d="M18 13h4M18 16.5h4M10 21h12" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-white p-1 shadow-sm ring-1 ring-black/5">
+        <img src="/brand/scubus-mark.png" alt="" className="max-h-full max-w-full object-contain" />
+      </span>
       <div className="leading-tight">
-        <div className="text-[15px] font-extrabold tracking-tight">AdmitDesk</div>
+        <div className="text-[15px] font-extrabold tracking-tight">S-CUBUS AdmitDesk</div>
         <div className="text-[11px] font-medium text-muted-foreground">Bulk admit cards</div>
       </div>
     </div>
   );
+}
+
+/** Full S-CUBUS logo (with tagline) for hero placements. */
+export function HeroLogo({ className = "" }: { className?: string }) {
+  return <img src="/brand/scubus-logo.png" alt="S-CUBUS — NEET · IIT-JEE · Foundation" className={className} />;
 }

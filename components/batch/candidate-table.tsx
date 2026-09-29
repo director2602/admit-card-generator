@@ -157,7 +157,7 @@ export function CandidateTable({
                 <th className="w-10 px-3 py-2">
                   <input
                     type="checkbox"
-                    className="accent-[#4338ca]"
+                    className="accent-brand"
                     aria-label="Select all generated on this page"
                     checked={doneOnPage.length > 0 && doneOnPage.every((r) => selected.has(r.id))}
                     onChange={(e) =>
@@ -202,7 +202,7 @@ export function CandidateTable({
                   <td className="px-3 py-2">
                     <input
                       type="checkbox"
-                      className="accent-[#4338ca]"
+                      className="accent-brand"
                       aria-label={`Select ${r.name}`}
                       disabled={r.genStatus !== "done"}
                       checked={selected.has(r.id)}

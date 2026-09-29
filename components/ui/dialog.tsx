@@ -12,7 +12,7 @@ export const DialogClose = D.Close;
 export function DialogContent({ className, children, title, description, wide }: { className?: string; children: React.ReactNode; title: string; description?: string; wide?: boolean }) {
   return (
     <D.Portal>
-      <D.Overlay className="fixed inset-0 z-50 bg-[#0d1130]/45 backdrop-blur-[2px]" />
+      <D.Overlay className="fixed inset-0 z-50 bg-[#1f0626]/45 backdrop-blur-[2px]" />
       <D.Content
         className={cn(
           "fixed left-1/2 top-1/2 z-50 max-h-[90vh] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-lg border border-border bg-card p-6 shadow-2xl",

@@ -7,19 +7,22 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --color-background: #f6f7fb;
-  --color-foreground: #151a33;
+  --color-background: #f8f6f9;
+  --color-foreground: #1f1024;
   --color-card: #ffffff;
-  --color-muted: #eef0f6;
-  --color-muted-foreground: #5c6384;
-  --color-border: #e1e4ee;
-  --color-input: #d5d9e6;
-  --color-ring: #4f46e5;
-  --color-primary: #1f2a5c;
+  --color-muted: #f2edf4;
+  --color-muted-foreground: #6b5d72;
+  --color-border: #e8e0eb;
+  --color-input: #d9cedd;
+  --color-ring: #7a2a8c;
+  --color-primary: #400c4d;
+  --color-primary-hover: #56185f;
   --color-primary-foreground: #ffffff;
-  --color-brand: #4338ca;
-  --color-brand-soft: #eef0ff;
-  --color-accent: #c08a2e;
+  --color-brand: #5e1a6e;
+  --color-brand-hover: #400c4d;
+  --color-brand-soft: #f5ecf7;
+  --color-accent: #e8791a;
+  --color-teal: #03869a;
   --color-success: #0f7b52;
   --color-success-soft: #e6f6ef;
   --color-warning: #9a5b00;

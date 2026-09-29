@@ -179,7 +179,7 @@ export function MappingStep({
         <td className="py-2 align-top">
           <div className="flex items-center gap-2">
             <label className="flex items-center gap-1 text-xs text-muted-foreground">
-              <input type="checkbox" className="accent-[#4338ca]" disabled={!!locked} checked={requiredSet.has(key)} onChange={(e) => toggleRequired(key, e.target.checked)} />
+              <input type="checkbox" className="accent-brand" disabled={!!locked} checked={requiredSet.has(key)} onChange={(e) => toggleRequired(key, e.target.checked)} />
               Required
             </label>
             {isCustom && (
@@ -323,7 +323,7 @@ export function MappingStep({
                 ] as const
               ).map(([v, l]) => (
                 <label key={v} className="flex cursor-pointer items-center gap-2">
-                  <input type="radio" name="dup" className="accent-[#4338ca]" checked={policy === v} onChange={() => setPolicy(v)} /> {l}
+                  <input type="radio" name="dup" className="accent-brand" checked={policy === v} onChange={() => setPolicy(v)} /> {l}
                 </label>
               ))}
             </div>
@@ -338,7 +338,7 @@ export function MappingStep({
                       <label key={rn} className="flex items-center gap-1">
                         <input
                           type="radio"
-                          className="accent-[#4338ca]"
+                          className="accent-brand"
                           name={`res-${g.key}`}
                           checked={resolutions[g.key] === rn}
                           onChange={() => setResolutions((r) => ({ ...r, [g.key]: rn }))}
@@ -356,7 +356,7 @@ export function MappingStep({
           <div className="flex items-center justify-between">
             <div className="text-sm font-semibold">Preview (first 20 rows)</div>
             <label className="flex items-center gap-2 text-xs">
-              <input type="checkbox" className="accent-[#4338ca]" checked={onlyProblems} onChange={(e) => setOnlyProblems(e.target.checked)} /> Only rows with problems
+              <input type="checkbox" className="accent-brand" checked={onlyProblems} onChange={(e) => setOnlyProblems(e.target.checked)} /> Only rows with problems
             </label>
           </div>
           <div className="overflow-x-auto rounded-lg border border-border">

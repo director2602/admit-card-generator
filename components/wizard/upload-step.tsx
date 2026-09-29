@@ -86,7 +86,7 @@ export function UploadStep({
                       importMode === v ? "border-brand ring-1 ring-brand" : "border-border",
                     )}
                   >
-                    <input type="radio" name="importMode" className="mt-1 accent-[#4338ca]" checked={importMode === v} onChange={() => setImportMode(v)} />
+                    <input type="radio" name="importMode" className="mt-1 accent-brand" checked={importMode === v} onChange={() => setImportMode(v)} />
                     <span>
                       <span className="block font-semibold">{label}</span>
                       <span className="text-xs text-muted-foreground">{hint}</span>

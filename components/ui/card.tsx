@@ -2,7 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export function Card({ className, ...p }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("rounded-lg border border-border bg-card shadow-[0_1px_2px_rgba(20,26,60,.04)]", className)} {...p} />;
+  return <div className={cn("rounded-lg border border-border bg-card shadow-[0_1px_2px_rgba(64,12,77,.05)]", className)} {...p} />;
 }
 export function CardHeader({ className, ...p }: React.HTMLAttributes<HTMLDivElement>) {
   return <div className={cn("flex flex-col gap-1 p-5 pb-3", className)} {...p} />;

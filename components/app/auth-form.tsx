@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Field, Input } from "@/components/ui/input";
-import { AppLogo } from "./logo";
+import { HeroLogo } from "./logo";
 
 export function AuthForm({ mode, allowSignup, showDemoHint = false }: { mode: "login" | "signup"; allowSignup: boolean; showDemoHint?: boolean }) {
   const router = useRouter();
@@ -29,10 +29,26 @@ export function AuthForm({ mode, allowSignup, showDemoHint = false }: { mode: "l
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[radial-gradient(1200px_600px_at_20%_-10%,#e4e6ff_0%,transparent_60%)] px-4 py-10">
+    <div className="grid min-h-screen lg:grid-cols-[1.05fr_1fr]">
+      <section className="relative hidden flex-col justify-between overflow-hidden bg-primary p-10 text-white lg:flex">
+        <div className="pointer-events-none absolute -right-40 -top-40 size-[520px] rounded-full bg-white/5" aria-hidden />
+        <div className="pointer-events-none absolute -bottom-52 -left-32 size-[560px] rounded-full bg-accent/10" aria-hidden />
+        <div className="relative text-sm font-semibold tracking-wide text-white/70">S-CUBUS AdmitDesk</div>
+        <div className="relative flex flex-col items-start gap-8">
+          <div className="rounded-2xl bg-white p-6 shadow-2xl">
+            <HeroLogo className="h-56 w-auto" />
+          </div>
+          <div>
+            <h2 className="max-w-md text-3xl font-extrabold leading-tight">Branded admit cards for every candidate — in minutes.</h2>
+            <p className="mt-3 max-w-md text-white/75">Upload a CSV, design the card, and download print-ready PDFs for SATHII and every S-CUBUS examination.</p>
+          </div>
+        </div>
+        <div className="relative text-xs text-white/50">© S-CUBUS Career Pvt. Ltd.</div>
+      </section>
+      <div className="flex items-center justify-center bg-[radial-gradient(900px_500px_at_80%_-10%,#f1e3f4_0%,transparent_60%)] px-4 py-10">
       <div className="w-full max-w-md">
-        <AppLogo className="mb-8 justify-center" />
-        <div className="rounded-xl border border-border bg-card p-7 shadow-[0_12px_40px_-12px_rgba(31,42,92,.25)]">
+        <HeroLogo className="mx-auto mb-8 h-36 w-auto lg:hidden" />
+        <div className="rounded-xl border border-border bg-card p-7 shadow-[0_12px_40px_-12px_rgba(64,12,77,.28)]">
           <h1 className="text-xl font-extrabold tracking-tight">{mode === "login" ? "Sign in to your workspace" : "Create your organisation"}</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "login" ? "Generate branded admit cards for every candidate in minutes." : "Your data stays private to your organisation."}
@@ -82,6 +98,7 @@ export function AuthForm({ mode, allowSignup, showDemoHint = false }: { mode: "l
             )}
           </p>
         )}
+      </div>
       </div>
     </div>
   );
